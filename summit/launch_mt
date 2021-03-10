@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /deploy-lsstts/docker-compose-ops
+source setup.env
+cd MT
+docker-compose pull mtcamhexapod
+docker-compose pull mtm2hexapod
+docker-compose pull mtrotator
+docker-compose up -d mtcamhexapod
+docker-compose up -d mtm2hexapod
+docker-compose up -d mtrotator
+cd ~/

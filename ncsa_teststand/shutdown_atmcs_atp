@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA/AT
+docker-compose down
+cd ~/

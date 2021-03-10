@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA/kafka_writers
+docker-compose up -d
+cd ~/

@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA
+source setup.env
+cd MT
+docker-compose pull mtm1m3-sim
+docker-compose pull mtm2-sim
+docker-compose up -d mtm1m3-sim
+docker-compose up -d mtm2-sim
+cd ~/

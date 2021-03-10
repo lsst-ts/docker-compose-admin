@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /deploy-lsstts/docker-compose-ops
+source setup.env
+cd support
+docker-compose pull ospl-daemon2
+docker-compose up -d ospl-daemon2
+cd ~/

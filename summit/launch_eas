@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /deploy-lsstts/docker-compose-ops
+source setup.env
+cd EAS
+docker-compose pull weatherstation1 
+docker-compose up -d weatherstation1
+cd ~/

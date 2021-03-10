@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /deploy-lsstts/docker-compose-ops
+source setup.env
+cd kafka_writers
+docker-compose pull
+docker-compose up -d
+cd ~/

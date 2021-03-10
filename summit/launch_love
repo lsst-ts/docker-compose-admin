@@ -1,0 +1,7 @@
+#!/bin/bash
+source /deploy-lsstts/.love-cred.sh
+cd /deploy-lsstts/LOVE-integration-tools/deploy/summit
+docker-compose pull
+docker network create love
+docker-compose up -d
+cd ~/

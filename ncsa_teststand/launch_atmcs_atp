@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA
+source setup.env
+cd AT
+docker-compose pull atmcs-sim
+docker-compose pull atpneumatics-sim
+docker-compose up -d atmcs-sim
+docker-compose up -d atpneumatics-sim
+cd ~/

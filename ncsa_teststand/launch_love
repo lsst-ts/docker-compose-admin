@@ -1,0 +1,7 @@
+#!/bin/bash
+source /deploy-lsstts/.love_secrets
+cd /deploy-lsstts/LOVE-integration-tools/deploy/ncsa
+docker-compose pull
+docker network create love
+docker-compose up -d
+cd ~/

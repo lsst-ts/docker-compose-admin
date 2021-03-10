@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /deploy-lsstts/LOVE-integration-tools/deploy/summit
+docker-compose down -v
+docker network rm love
+cd ~/
