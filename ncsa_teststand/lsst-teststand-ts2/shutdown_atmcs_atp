@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA
+source setup.env
+cd AT
+docker-compose down
+cd ~/

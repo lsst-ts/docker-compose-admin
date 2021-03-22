@@ -1,4 +1,0 @@
-#!/bin/bash
-cd /deploy-lsstts/docker-compose-ops/EAS
-docker-compose down
-cd ~/

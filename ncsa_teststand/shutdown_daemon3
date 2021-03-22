@@ -1,4 +1,0 @@
-#!/bin/bash
-cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA/support
-docker-compose down
-cd ~/

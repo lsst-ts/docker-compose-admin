@@ -1,4 +1,0 @@
-#!/bin/bash
-cd /deploy-lsstts/docker-compose-ops/MT
-docker-compose down
-cd ~/
