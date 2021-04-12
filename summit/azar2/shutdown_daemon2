@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /deploy-lsstts/docker-compose-ops
+source setup.env
+cd support
+docker-compose down
+cd ~/

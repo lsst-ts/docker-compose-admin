@@ -1,4 +1,5 @@
 #!/bin/bash
+source /deploy-lsstts/.love_secrets
 cd /deploy-lsstts/LOVE-integration-tools/deploy/ncsa
 docker-compose down -v
 docker network rm love
