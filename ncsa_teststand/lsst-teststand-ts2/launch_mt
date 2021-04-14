@@ -1,4 +1,0 @@
-#!/bin/bash
-cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA/MT
-docker-compose up -d 
-cd ~/

@@ -1,5 +1,5 @@
 #!/bin/bash
-source /deploy-lsstts/.love_cred.sh
+source /deploy-lsstts/.love-cred.sh
 cd /deploy-lsstts/LOVE-integration-tools/deploy/ncsa
 docker-compose pull
 docker network create love
