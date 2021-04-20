@@ -1,9 +1,18 @@
 #!/bin/bash
+if [ $# -lt 1 ]; then
+  cscs="mtm1m3-sim mtm2-sim"
+else
+  cscs="$1"
+fi
 cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
 source setup.env
 cd MT
-docker-compose pull mtm1m3-sim
-docker-compose pull mtm2-sim
-docker-compose up -d mtm1m3-sim
-docker-compose up -d mtm2-sim
+for csc in ${cscs}
+do
+  docker-compose pull ${csc}
+done
+for csc in ${cscs}
+do
+  docker-compose up -d ${csc}
+done
 cd ~/
