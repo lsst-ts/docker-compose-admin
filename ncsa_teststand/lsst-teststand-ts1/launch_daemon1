@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /deploy-lsstts/ts_Dockerfiles/Compose/NCSA
+cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
 source setup.env
 cd support
 docker-compose pull ospl-daemon1
