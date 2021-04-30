@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /deploy-lsstts/docker-compose-ops/summit-test
+source setup.env
+cd cscs
+docker-compose pull test42 
+docker-compose up -d test42
+cd ~/

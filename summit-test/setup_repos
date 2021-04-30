@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /
+mkdir deploy-lsstts
+cd deploy-lsstts
+mkdir docker_tmp
+chmod 777 docker_tmp
+git clone https://github.com/lsst-it/docker-compose-ops.git
+git clone https://github.com/lsst-ts/ts_ddsconfig.git
+cd ~/
