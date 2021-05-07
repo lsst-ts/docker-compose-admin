@@ -1,9 +1,19 @@
 #!/bin/bash
-cd /
-mkdir deploy-lsstts
-cd deploy-lsstts
-mkdir docker_tmp
-chmod 777 docker_tmp
-git clone https://github.com/lsst-it/docker-compose-ops.git
-git clone https://github.com/lsst-ts/ts_ddsconfig.git
-cd ~/
+main_dir=deploy-lsstts
+docker_dir=docker_tmp
+#cd /
+if [ ! -e ${main_dir} ]; then
+  mkdir ${main_dir}
+fi
+cd ${main_dir}
+if [ ! -e ${docker_dir} ]; then
+  mkdir ${docker_dir}
+  chmod 777 ${docker_dir}
+fi
+if [ ! -e docker-compose-ops ]; then
+  git clone https://github.com/lsst-it/docker-compose-ops.git
+fi
+if [ ! -e ts_ddsconfig ]; then
+  git clone https://github.com/lsst-ts/ts_ddsconfig.git
+fi
+#cd ~/
