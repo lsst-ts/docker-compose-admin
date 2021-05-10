@@ -1,4 +1,5 @@
 #!/bin/bash
+# Launch ATMCS/ATPneumatics on lsst-teststand-ts2
 if [ $# -lt 1 ]; then
   cscs="atmcs-sim atpneumatics-sim"
 else

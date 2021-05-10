@@ -1,4 +1,5 @@
 #!/bin/bash
+# Update existing configuration repository.
 if [ $# -eq 0 ] || [ $# -gt 2 ]; then
   echo "update_repo <Repo directory> [Branch name]"
   exit 255
