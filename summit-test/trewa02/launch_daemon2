@@ -1,4 +1,5 @@
 #!/bin/bash
+# Launch the OSPL daemon on trewa02
 cd /deploy-lsstts/docker-compose-ops/summit-test
 source setup.env
 cd support

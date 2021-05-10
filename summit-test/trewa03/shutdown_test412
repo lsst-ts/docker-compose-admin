@@ -1,4 +1,5 @@
 #!/bin/bash
+# Shutdown Test CSC with Id = 412 on trewa03
 cd /deploy-lsstts/docker-compose-ops/summit
 source setup.env
 cd EAS
