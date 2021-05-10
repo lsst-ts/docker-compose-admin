@@ -1,0 +1,24 @@
+#!/bin/bash
+# Script to setup the initial deployment configuration
+# Only needs to be run once.
+main_dir=deploy-lsstts
+docker_dir=docker_tmp
+cd /
+if [ ! -e ${main_dir} ]; then
+  mkdir ${main_dir}
+else
+  echo "Deployment configuration looks to already be present."
+  exit 255
+fi
+cd ${main_dir}
+if [ ! -e ${docker_dir} ]; then
+  mkdir ${docker_dir}
+  chmod 777 ${docker_dir}
+fi
+if [ ! -e docker-compose-ops ]; then
+  git clone https://github.com/lsst-it/docker-compose-ops.git
+fi
+if [ ! -e ts_ddsconfig ]; then
+  git clone https://github.com/lsst-ts/ts_ddsconfig.git
+fi
+cd ~/

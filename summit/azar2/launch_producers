@@ -1,4 +1,5 @@
 #!/bin/bash
+# Launch alternate domainId producers on azar2
 cd /deploy-lsstts/docker-compose-ops/summit
 source setup.env
 cd kafka_writers

@@ -1,0 +1,26 @@
+#!/bin/bash
+# Link the scripts for a given site/machine in the current directory.
+if [ $# -lt 1 ]; then
+  echo "link_repos <site/machine directory>"
+  exit 255
+fi
+machine_dir=${1}
+site_dir=$(dirname ${machine_dir})
+# Link site level scripts
+site_files=$(ls -1 ${site_dir})
+for site_file in ${site_files}
+do
+  full_site_file="${site_dir}/${site_file}"
+  if [ -x "${full_site_file}" ] && [ ! -d "${full_site_file}" ]; then
+    echo "${full_site_file}"
+    ln -s ${full_site_file} .
+  fi
+done
+# Link machine level scripts
+machine_files=$(ls -1 ${machine_dir})
+for machine_file in ${machine_files}
+do
+  full_machine_file="${machine_dir}/${machine_file}"
+  echo "${full_machine_file}"
+  ln -s ${full_machine_file} .
+done

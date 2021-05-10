@@ -1,4 +1,5 @@
 #!/bin/bash
+# Launch M1M3/M2 on lsst-teststand-ts2
 if [ $# -lt 1 ]; then
   cscs="mtm1m3-sim mtm2-sim"
 else

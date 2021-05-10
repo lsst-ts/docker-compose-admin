@@ -1,6 +1,6 @@
 #!/bin/bash
-# Launch OSPL daemon on lsst-teststand-ts3
-cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
+# Launch the OSPL daemon on trewa03
+cd /deploy-lsstts/docker-compose-ops/summit-test
 source setup.env
 cd support
 docker-compose pull ospl-daemon3

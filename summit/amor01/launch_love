@@ -1,4 +1,5 @@
 #!/bin/bash
+# Launch LOVE on amor01
 source /deploy-lsstts/.love-cred.sh
 cd /deploy-lsstts/LOVE-integration-tools/deploy/summit
 docker-compose pull
