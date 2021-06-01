@@ -1,0 +1,24 @@
+#!/bin/bash
+# Update existing configuration repository.
+if [ $# -eq 0 ] || [ $# -gt 2 ]; then
+  echo "update_repo <Repo directory> [Branch name]"
+  exit 255
+fi
+if [ $# -lt 2 ]; then
+  switch=0
+else
+  switch=1
+fi
+repo_dir=$1
+branch=$2
+cd ${repo_dir}
+if [ ${switch} -eq 1 ]; then
+  git checkout develop
+fi
+git fetch -p
+git rebase -v
+if [ ${switch} -eq 1 ]; then
+  git checkout ${branch}
+  git branch
+fi
+cd ~/
