@@ -3,6 +3,6 @@
 cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
 source setup.env
 cd support
-docker-compose pull ospl-daemon2
-docker-compose up -d ospl-daemon2
+docker-compose pull ospl-ts2
+docker-compose up -d ospl-ts2
 cd ~/
