@@ -1,6 +1,6 @@
 #!/bin/bash
 # Shutdown the OSPL daemon on trewa03
-cd /deploy-lsstts/docker-compose-ops/summit
+cd /deploy-lsstts/docker-compose-ops/summit-test
 source setup.env
 cd support
 docker-compose down
