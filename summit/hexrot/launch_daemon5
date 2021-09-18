@@ -1,8 +1,0 @@
-#!/bin/bash
-# Launch OSPL daemon on hexrot
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-cd support
-docker-compose pull ospl-daemon5
-docker-compose up -d ospl-daemon5
-cd ~/

@@ -1,0 +1,9 @@
+#!/bin/bash
+# Launch OSPL daemon on hexrot
+dc_file="-f docker-compose-hostnet.yaml"
+cd /deploy-lsstts/docker-compose-ops/summit
+source setup.env
+cd support
+docker-compose ${dc_file} pull ospl-hexrot
+docker-compose ${dc_file} up -d ospl-hexrot
+cd ~/
