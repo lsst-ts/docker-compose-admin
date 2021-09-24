@@ -13,7 +13,12 @@ repo_dir=$1
 branch=$2
 cd ${repo_dir}
 if [ ${switch} -eq 1 ]; then
-  git checkout develop
+  if [[ "${repo_dir}" == *"docker-compose-ops"* ]]; then
+    main_branch=master
+  else
+    main_branch=develop
+  fi
+  git checkout ${main_branch}
 fi
 git fetch -p
 git rebase -v
