@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown OSPL daemon on amor01
+# Shutdown OSPL daemon on amor02
 cd /deploy-lsstts/docker-compose-ops/summit
 source setup.env
 cd support

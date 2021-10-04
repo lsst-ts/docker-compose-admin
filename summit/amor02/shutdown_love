@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown LOVE on amor01
+# Shutdown LOVE on amor02
 source /deploy-lsstts/.love-cred.sh
 cd /deploy-lsstts/LOVE-integration-tools/deploy/summit2
 docker-compose down -v
