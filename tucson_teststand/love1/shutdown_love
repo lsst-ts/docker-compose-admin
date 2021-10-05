@@ -3,5 +3,5 @@
 source /deploy-lsstts/.love-cred.sh
 cd /deploy-lsstts/LOVE-integration-tools/deploy/tucson
 docker-compose down -v
-docker network rm love
+#docker network rm love
 cd ~/

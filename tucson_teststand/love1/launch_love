@@ -3,6 +3,6 @@
 source /deploy-lsstts/.love-cred.sh
 cd /deploy-lsstts/LOVE-integration-tools/deploy/tucson
 docker-compose pull
-docker network create love
+#docker network create love
 docker-compose up -d
 cd ~/
