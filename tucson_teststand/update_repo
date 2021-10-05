@@ -20,9 +20,10 @@ if [ ${switch} -eq 1 ]; then
   fi
   git checkout ${main_branch}
 fi
-#git fetch -p
-#git rebase -v
-git pull --rebase --stat
+repo_branch=$(git rev-parse --abbrev-ref HEAD)
+git fetch --all
+git checkout ${repo_branch}
+git reset --hard origin/${repo_branch}
 if [ ${switch} -eq 1 ]; then
   git checkout ${branch}
   git branch
