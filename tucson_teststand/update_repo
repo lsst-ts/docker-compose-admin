@@ -20,8 +20,9 @@ if [ ${switch} -eq 1 ]; then
   fi
   git checkout ${main_branch}
 fi
-git fetch -p
-git rebase -v
+#git fetch -p
+#git rebase -v
+git pull --rebase --stat
 if [ ${switch} -eq 1 ]; then
   git checkout ${branch}
   git branch
