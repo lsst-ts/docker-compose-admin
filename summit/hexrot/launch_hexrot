@@ -19,6 +19,8 @@ else
     cscs="mtm2hexapod"
   elif [[ $1 -eq 3 ]]; then
     cscs="mtrotator"
+  elif [[ $1 -eq 4 ]]; then
+    cscs="mtm2hexapod-sim"
   else
     echo "Do not know this index: ${1}"
     exit 255
