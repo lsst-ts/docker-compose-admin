@@ -1,7 +1,0 @@
-#!/bin/bash
-# Shutdown OSPL daemon on hexrot
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-cd support
-docker-compose -f docker-compose-hostnet.yaml down
-cd ~/
