@@ -1,7 +1,8 @@
 #!/bin/bash
-# Shutdown M1M3/M2 on tel-hw1
+# Launch M1M3 on tel-hw1
 cd /deploy-lsstts/docker-compose-ops/tucson-teststand
 source setup.env
 cd MT
-docker-compose down
+docker-compose pull
+docker-compose up -d
 cd ~/
