@@ -1,7 +1,8 @@
 #!/bin/bash
-# Shutdown M1M3/M2 on lsst-teststand-ts2
+# Launch M1M3 on lsst-teststand-ts2
 cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
 source setup.env
 cd MT
-docker-compose down
+docker-compose pull
+docker-compose up -d
 cd ~/
