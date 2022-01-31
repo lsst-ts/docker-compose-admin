@@ -1,6 +1,11 @@
 #!/bin/bash
 # Script to setup the initial deployment configuration
 # Only needs to be run once.
+if [ $# -eq 1 ]; then
+  install_love=1
+else
+  install_love=0
+fi
 main_dir=deploy-lsstts
 docker_dir=docker_tmp
 cd /
@@ -20,5 +25,10 @@ if [ ! -e docker-compose-ops ]; then
 fi
 if [ ! -e ts_ddsconfig ]; then
   git clone https://github.com/lsst-ts/ts_ddsconfig.git
+fi
+if [ ${install_love} -eq 1 ]; then
+  if [ ! -e LOVE-integration-tools ]; then
+    git clone https://github.com/lsst-ts/LOVE-integration-tools.git
+  fi
 fi
 cd ~/
