@@ -1,7 +1,0 @@
-#!/bin/bash
-# Shutdown ATMCS/ATPneumatics on lsst-teststand-ts2
-cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
-source setup.env
-cd AT
-docker-compose down
-cd ~/

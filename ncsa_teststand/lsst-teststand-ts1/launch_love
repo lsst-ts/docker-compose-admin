@@ -1,8 +1,0 @@
-#!/bin/bash
-# Launch LOVE on lsst-teststand-ts1
-source /deploy-lsstts/.love-cred.sh
-cd /deploy-lsstts/LOVE-integration-tools/deploy/ncsa
-docker-compose pull
-docker network create love
-docker-compose up -d
-cd ~/

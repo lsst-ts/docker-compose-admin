@@ -1,7 +1,0 @@
-#!/bin/bash
-# Shutdown OSPL daemon on lsst-teststand-ts1
-cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
-source setup.env
-cd support
-docker-compose down
-cd ~/
