@@ -1,8 +1,0 @@
-#!/bin/bash
-# Launch OSPL daemon on lsst-l1-cl-ocs
-cd /deploy-lsstts/docker-compose-ops/ncsa-teststand
-source setup.env
-cd support
-docker-compose pull ospl-ocs
-docker-compose up -d ospl-ocs
-cd ~/

@@ -1,7 +1,0 @@
-#!/bin/bash
-# Shutdown LOVE on lsst-teststand-ts1
-source /deploy-lsstts/.love-cred.sh
-cd /deploy-lsstts/LOVE-integration-tools/deploy/ncsa
-docker-compose down -v
-docker network rm love
-cd ~/
