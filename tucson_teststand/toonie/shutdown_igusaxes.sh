@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown igusyaxis, igusyaxis, on loonie
+# Shutdown igusyaxis, igusyaxis, on toonie
 
 # Get current working directory
 cwd=$(pwd)

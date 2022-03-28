@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch igusyaxis, igusyaxis, on loonie
+# Launch igusyaxis, igusyaxis, on toonie
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then

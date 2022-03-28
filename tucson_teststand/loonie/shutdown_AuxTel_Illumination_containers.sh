@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown igusyaxis, igusyaxis, on loonie
+# Shutdown all or one of electrometer1, atmonochromator, or fiberspectrograph_broadband, on loonie
 
 # Get current working directory
 cwd=$(pwd)

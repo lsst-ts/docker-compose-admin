@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch OSPL daemon on tel-hw1
+# Launch OSPL daemon on loonie
 
 # Get current working directory
 cwd=$(pwd)

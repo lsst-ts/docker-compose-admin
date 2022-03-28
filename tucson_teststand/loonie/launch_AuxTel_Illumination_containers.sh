@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch electrometer, atmonochromator, fiberspectrograph, on toonie
+# Launch electrometer, atmonochromator, fiberspectrograph, on loonie
 
 # Get current working directory
 cwd=$(pwd)
@@ -11,16 +11,16 @@ else
   cscs="$1"
 fi
 
+# setup the DDS environment variables
+cd /deploy-lsstts/docker-compose-ops/tucson-teststand
+source setup.env
+
 if [ ! -d ${OSPL_SHMEM_SOCKET_DIR} ] 
 then
   #create temporary file if not present
   mkdir -p ${OSPL_SHMEM_SOCKET_DIR}
   sudo chmod a+rw ${OSPL_SHMEM_SOCKET_DIR}
 fi
-
-# setup the DDS environment variables
-cd /deploy-lsstts/docker-compose-ops/tucson-teststand
-source setup.env
 
 # source the lfa credentials
 if [[ "$cscs" == *"fiberspectrograph_broadband"* ]]; then

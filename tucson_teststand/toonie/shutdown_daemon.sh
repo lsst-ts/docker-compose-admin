@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown OSPL daemon on loonie
+# Shutdown OSPL daemon on toonie
 
 # Get current working directory
 cwd=$(pwd)
