@@ -1,12 +1,13 @@
 #!/bin/bash
-# Launch electrometer, atmonochromator, fiberspectrograph, on loonie
+# Launch electrometer2, on toonie
+# other CSCs, both electrometers and fiber_spectrographs to be added in the future
 
 # Get current working directory
 cwd=$(pwd)
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then
-  cscs="electrometer1 atmonochromator fiberspectrograph_broadband"
+  cscs="electrometer2"  # Will add more when they come online
 else
   cscs="$1"
 fi
@@ -23,7 +24,7 @@ then
 fi
 
 # source the lfa credentials
-if [[ "$cscs" == *"fiberspectrograph_broadband"* ]]; then
+if [[ "$cscs" == *"fiberspectrograph"* ]]; then
   echo "Sourcing LFA credentials to pass to CSC"
   source /deploy-lsstts/.lfa_cred.sh
 fi
