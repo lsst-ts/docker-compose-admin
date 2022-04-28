@@ -6,7 +6,7 @@ cwd=$(pwd)
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then
-  cscs="electrometer1 electrometer2"
+  cscs="electrometer2 electrometer3 electrometer4"
 else
   cscs="$1"
 fi
