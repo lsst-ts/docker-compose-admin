@@ -1,8 +1,0 @@
-#!/bin/bash
-# Launch OSPL daemon on amor02
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-cd support
-docker-compose pull ospl-amor02
-docker-compose up -d ospl-amor02
-cd ~/
