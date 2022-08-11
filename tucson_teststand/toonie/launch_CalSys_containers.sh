@@ -7,7 +7,7 @@ cwd=$(pwd)
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then
-  cscs="electrometer2 electrometer3 electrometer4 electrometer5 laser"  # Will add more when they come online
+  cscs="electrometer2 electrometer3 electrometer4 electrometer5 laser cbp"  # Will add more when they come online
 else
   cscs="$1"
 fi
