@@ -1,0 +1,8 @@
+#!/bin/bash
+# Launch OSPL daemon on tel-hw1
+cd /deploy-lsstts/docker-compose-ops/base-teststand
+source setup.env
+cd support
+docker-compose pull ospl-telhw1
+docker-compose up -d ospl-telhw1
+cd ~/
