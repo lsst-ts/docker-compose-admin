@@ -1,13 +1,12 @@
 #!/bin/bash
-# Launch electrometer2, on toonie
-# other CSCs, both electrometers and fiber_spectrographs to be added in the future
+# Launch Calibration system containers, on toonie
 
 # Get current working directory
 cwd=$(pwd)
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then
-  cscs="electrometer2 electrometer3 electrometer4 electrometer5 laser cbp"  # Will add more when they come online
+  cscs="electrometer2 electrometer3 electrometer4 electrometer5 laser cbp fiberspectrograph_blue fiberspectrograph_red" 
 else
   cscs="$1"
 fi
