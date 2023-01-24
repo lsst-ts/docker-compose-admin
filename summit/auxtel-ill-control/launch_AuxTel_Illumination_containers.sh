@@ -1,18 +1,18 @@
 #!/bin/bash
-# Launch electrometer, atmonochromator, fiberspectrograph, on loonie
+# Launch fiberspectrograph_broadband on auxtel-ill-control
 
 # Get current working directory
 cwd=$(pwd)
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then
-  cscs="electrometer1 atmonochromator fiberspectrograph_broadband"
+  cscs="fiberspectrograph_broadband"
 else
   cscs="$1"
 fi
 
 # setup the DDS environment variables
-cd /deploy-lsstts/docker-compose-ops/tucson-teststand
+cd /deploy-lsstts/docker-compose-ops/summit
 source setup.env
 
 if [ ! -d ${OSPL_SHMEM_SOCKET_DIR} ] 
@@ -28,7 +28,7 @@ if [[ "$cscs" == *"fiberspectrograph_broadband"* ]]; then
   source /deploy-lsstts/.lfa_cred.sh
 fi
 
-cd calibration_lab
+cd auxtel-ill-control
 
 for csc in ${cscs}
 do

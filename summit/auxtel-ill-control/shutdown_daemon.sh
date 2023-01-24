@@ -1,10 +1,10 @@
 #!/bin/bash
-# Shutdown OSPL daemon on loonie
+# Shutdown OSPL daemon on auxtel-ill-control
 
 # Get current working directory
 cwd=$(pwd)
 
-cd /deploy-lsstts/docker-compose-ops/tucson-teststand
+cd /deploy-lsstts/docker-compose-ops/summit
 source setup.env
 cd support
 docker-compose down
