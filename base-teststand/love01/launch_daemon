@@ -1,8 +1,8 @@
 #!/bin/bash
-# Launch OSPL daemon on love1
+# Launch OSPL daemon on love01
 cd /deploy-lsstts/docker-compose-ops/base-teststand
 source setup.env
 cd support
-docker-compose pull ospl-love1
-docker-compose up -d ospl-love1
+docker-compose pull ospl-love01
+docker-compose up -d ospl-love01
 cd ~/

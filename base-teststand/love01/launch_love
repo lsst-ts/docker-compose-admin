@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch LOVE on love1
+# Launch LOVE on love01
 source /deploy-lsstts/.love-cred.sh
 cd /deploy-lsstts/LOVE-integration-tools/deploy/base
 docker-compose pull

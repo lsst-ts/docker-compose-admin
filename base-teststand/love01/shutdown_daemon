@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown OSPL daemon on love1
+# Shutdown OSPL daemon on love01
 cd /deploy-lsstts/docker-compose-ops/base-teststand
 source setup.env
 cd support
