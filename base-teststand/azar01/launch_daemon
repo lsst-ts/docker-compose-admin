@@ -1,0 +1,8 @@
+#!/bin/bash
+# Launch OSPL daemon on azar01
+cd /deploy-lsstts/docker-compose-ops/base-teststand
+source setup.env
+cd support
+docker-compose pull ospl-azar01
+docker-compose up -d ospl-azar01
+cd ~/
