@@ -3,5 +3,5 @@
 cd /deploy-lsstts/docker-compose-ops/base-teststand
 source setup.env
 cd support
-docker-compose down
+docker compose down
 cd ~/

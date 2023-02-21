@@ -3,6 +3,6 @@
 cd /deploy-lsstts/docker-compose-ops/base-teststand
 source setup.env
 cd support
-docker-compose pull ospl-love01
-docker-compose up -d ospl-love01
+docker compose pull ospl-love01
+docker compose up -d ospl-love01
 cd ~/
