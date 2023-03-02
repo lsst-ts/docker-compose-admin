@@ -5,7 +5,7 @@ if [ $# -lt 1 ]; then
 else
   cscs="$1"
 fi
-cd /deploy-lsstts/docker-compose-ops/base-teststand
+cd docker-compose-ops/base-teststand
 source setup.env
 cd AT
 for csc in ${cscs}
