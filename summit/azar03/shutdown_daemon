@@ -3,5 +3,5 @@
 cd docker-compose-ops/summit
 source setup.env
 cd support
-docker-compose down
+docker compose down
 cd ~/
