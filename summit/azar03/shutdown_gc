@@ -1,0 +1,20 @@
+#!/bin/bash
+# Shutdown GenericCameras on azar03
+if [ $# -ge 1 ]; then
+  cscs="$@"
+else
+  cscs=""
+fi
+if [ -z "${cscs}" ]; then
+  source .lfa-creds.sh
+  cd docker-compose-ops/summit
+  source setup.env
+  cd GC
+  docker compose down
+else
+  for csc in ${cscs}
+  do
+    docker stop ${csc}
+    docker rm ${csc}
+  done
+fi

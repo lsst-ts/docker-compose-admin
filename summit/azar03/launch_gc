@@ -1,0 +1,20 @@
+#!/bin/bash
+# Launch GenericCameras on azar03
+if [ $# -lt 1 ]; then
+  cscs="genericcamera101 genericcamera102 genericcamera103"
+else
+  cscs="$1"
+fi
+source .lfa-creds.sh
+cd docker-compose-ops/summit
+source setup.env
+cd GC
+for csc in ${cscs}
+do
+  docker compose pull ${csc}
+done
+for csc in ${cscs}
+do
+  docker compose up -d ${csc}
+done
+cd ~/
