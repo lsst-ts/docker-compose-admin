@@ -1,8 +1,8 @@
 #!/bin/bash
 # Launch OSPL daemon on azar03
-cd /deploy-lsstts/docker-compose-ops/summit
+cd docker-compose-ops/summit
 source setup.env
 cd support
-docker-compose pull ospl-azar3
-docker-compose up -d ospl-azar3
+docker compose pull ospl-azar3
+docker compose up -d ospl-azar3
 cd ~/
