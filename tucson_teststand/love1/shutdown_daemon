@@ -1,6 +1,6 @@
 #!/bin/bash
 # Shutdown OSPL daemon on love1
-cd /deploy-lsstts/docker-compose-ops/tucson-teststand
+cd docker-compose-ops/tucson-teststand
 source setup.env
 cd support
 docker-compose down
