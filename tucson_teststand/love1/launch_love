@@ -2,7 +2,7 @@
 # Launch LOVE on love1
 source .love-cred.sh
 cd LOVE-integration-tools/deploy/tucson
-docker-compose pull
+docker compose pull
 #docker network create love
-docker-compose up -d
+docker compose up -d
 cd ~/

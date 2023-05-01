@@ -2,6 +2,6 @@
 # Shutdown LOVE on love1
 source .love-cred.sh
 cd LOVE-integration-tools/deploy/tucson
-docker-compose down -v
+docker compose down -v
 #docker network rm love
 cd ~/

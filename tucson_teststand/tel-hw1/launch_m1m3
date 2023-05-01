@@ -3,6 +3,6 @@
 cd docker-compose-ops/tucson-teststand
 source setup.env
 cd MT
-docker-compose pull
-docker-compose up -d
+docker compose pull
+docker compose up -d
 cd ~/

@@ -3,5 +3,5 @@
 cd docker-compose-ops/tucson-teststand
 source setup.env
 cd MT
-docker-compose down
+docker compose down
 cd ~/
