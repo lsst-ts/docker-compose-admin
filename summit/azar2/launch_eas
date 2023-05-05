@@ -1,8 +1,0 @@
-#!/bin/bash
-# Launch EAS CSCs on azar2
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-cd EAS
-docker-compose pull weatherstation1 
-docker-compose up -d weatherstation1
-cd ~/
