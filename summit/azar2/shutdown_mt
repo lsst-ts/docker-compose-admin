@@ -1,7 +1,7 @@
 #!/bin/bash
 # Shutdown MT CSCs on azar2
-cd /deploy-lsstts/docker-compose-ops/summit
+cd docker-compose-ops/summit
 source setup.env
 cd MT
-docker-compose down
+docker compose down
 cd ~/
