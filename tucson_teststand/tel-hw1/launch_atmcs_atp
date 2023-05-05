@@ -5,15 +5,15 @@ if [ $# -lt 1 ]; then
 else
   cscs="$1"
 fi
-cd /deploy-lsstts/docker-compose-ops/tucson-teststand
+cd docker-compose-ops/tucson-teststand
 source setup.env
 cd AT
 for csc in ${cscs}
 do
-  docker-compose pull ${csc}
+  docker compose pull ${csc}
 done
 for csc in ${cscs}
 do
-  docker-compose up -d ${csc}
+  docker compose up -d ${csc}
 done
 cd ~/

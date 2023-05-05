@@ -15,6 +15,8 @@ cd ${repo_dir}
 if [ ${switch} -eq 1 ]; then
   if [[ "${repo_dir}" == *"docker-compose-ops"* ]]; then
     main_branch=master
+  elif [[ "${repo_dir}" == *"docker-compose-admin"* ]]; then
+    main_branch=main
   else
     main_branch=develop
   fi

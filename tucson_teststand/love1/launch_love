@@ -1,8 +1,8 @@
 #!/bin/bash
 # Launch LOVE on love1
-source /deploy-lsstts/.love-cred.sh
-cd /deploy-lsstts/LOVE-integration-tools/deploy/tucson
-docker-compose pull
+source .love-cred.sh
+cd LOVE-integration-tools/deploy/tucson
+docker compose pull
 #docker network create love
-docker-compose up -d
+docker compose up -d
 cd ~/

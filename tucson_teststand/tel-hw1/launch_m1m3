@@ -1,8 +1,8 @@
 #!/bin/bash
 # Launch M1M3 on tel-hw1
-cd /deploy-lsstts/docker-compose-ops/tucson-teststand
+cd docker-compose-ops/tucson-teststand
 source setup.env
 cd MT
-docker-compose pull
-docker-compose up -d
+docker compose pull
+docker compose up -d
 cd ~/
