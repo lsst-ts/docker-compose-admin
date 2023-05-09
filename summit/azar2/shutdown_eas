@@ -1,7 +1,0 @@
-#!/bin/bash
-# Shutdown EAS CSCs on azar2
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-cd EAS
-docker-compose down
-cd ~/

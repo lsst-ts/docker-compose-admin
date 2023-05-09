@@ -1,12 +1,8 @@
 #!/bin/bash
 # Launch MT CSCs on azar2
-cd /deploy-lsstts/docker-compose-ops/summit
+cd docker-compose-ops/summit
 source setup.env
 cd MT
-docker-compose pull mtcamhexapod
-docker-compose pull mtm2hexapod
-docker-compose pull mtrotator
-docker-compose up -d mtcamhexapod
-docker-compose up -d mtm2hexapod
-docker-compose up -d mtrotator
+docker compose pull mtmount
+docker compose up -d mtmount
 cd ~/
