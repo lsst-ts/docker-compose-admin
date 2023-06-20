@@ -11,22 +11,15 @@ else
   cscs="$1"
 fi
 
-# setup the DDS environment variables
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-
-if [ ! -d ${OSPL_SHMEM_SOCKET_DIR} ] 
-then
-  #create temporary file if not present
-  mkdir -p ${OSPL_SHMEM_SOCKET_DIR}
-  sudo chmod a+rw ${OSPL_SHMEM_SOCKET_DIR}
-fi
-
 # source the lfa credentials
 if [[ "$cscs" == *"fiberspectrograph_broadband"* ]]; then
   echo "Sourcing LFA credentials to pass to CSC"
-  source /deploy-lsstts/.lfa_cred.sh
+  source .lfa_cred.sh
 fi
+
+# setup the DDS environment variables
+cd docker-compose-ops/summit
+source setup.env
 
 cd auxtel-ill-control
 

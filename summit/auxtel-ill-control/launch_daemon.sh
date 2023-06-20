@@ -4,7 +4,7 @@
 # Get current working directory
 cwd=$(pwd)
 
-cd /deploy-lsstts/docker-compose-ops/summit
+cd docker-compose-ops/summit
 source setup.env
 cd support
 docker-compose pull ospl-auxtel-ill-control
