@@ -11,7 +11,7 @@ else
   cscs="$1"
 fi
 
-cd /deploy-lsstts/docker-compose-ops/summit
+cd docker-compose-ops/summit
 source setup.env
 cd auxtel-ill-control
 
