@@ -12,9 +12,17 @@ fi
 repo_dir=$1
 branch=$2
 cd ${repo_dir}
+diff=$(git diff)
+if [[ ! -z "${diff}" ]]; then
+  echo "Local change present, saving change to file."
+  diff_file=${HOME}/${repo_dir%/}_$(date +"%Y%m%d_%H%M%S").patch
+  git diff --output=${diff_file}
+fi
 if [ ${switch} -eq 1 ]; then
   if [[ "${repo_dir}" == *"docker-compose-ops"* ]]; then
     main_branch=master
+  elif [[ "${repo_dir}" == *"docker-compose-admin"* ]]; then
+    main_branch=main
   else
     main_branch=develop
   fi
