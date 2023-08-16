@@ -7,7 +7,7 @@ cwd=$(pwd)
 
 # Check to see if a name was given, otherwise assume both
 if [ $# -lt 1 ]; then
-  cscs="electrometer2 electrometer3 electrometer4 electrometer5 laser"  # Will add more when they come online
+  cscs="fiberspectrograph_blue fiberspectrograph_red electrometer1 electrometer2 electrometer3 electrometer4 electrometer5 laser cbp"  # Will add more when they come online
 else
   cscs="$1"
 fi
@@ -16,15 +16,15 @@ fi
 cd /deploy-lsstts/docker-compose-ops/tucson-teststand
 source setup.env
 
-if [ ! -d ${OSPL_SHMEM_SOCKET_DIR} ] 
+if [ ! -d ${CAL_OSPL_SHMEM_SOCKET_DIR} ]
 then
   #create temporary file if not present
-  mkdir -p ${OSPL_SHMEM_SOCKET_DIR}
-  sudo chmod a+rw ${OSPL_SHMEM_SOCKET_DIR}
+  mkdir -p ${CAL_OSPL_SHMEM_SOCKET_DIR}
+  sudo chmod a+rw ${CAL_OSPL_SHMEM_SOCKET_DIR}
 fi
 
 # source the lfa credentials
-if [[ "$cscs" == *"fiberspectrograph"* ]]; then
+if [[ "$cscs" == *"fiberspectrograph"* || "$cscs" == *"electrometer"* ]]; then
   echo "Sourcing LFA credentials to pass to CSC"
   source /deploy-lsstts/.lfa_cred.sh
 fi
