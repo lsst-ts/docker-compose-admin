@@ -6,6 +6,9 @@ if [ $# -lt 1 ]; then
 fi
 machine_dir=${1}
 site_dir=$(dirname ${machine_dir})
+top_dir=$(dirname ${site_dir})
+# Link update_repo bin script
+ln -s ${top_dir}/bin/update_repo .
 # Link site level scripts
 site_files=$(ls -1 ${site_dir})
 for site_file in ${site_files}
