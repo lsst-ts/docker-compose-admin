@@ -12,11 +12,11 @@ fi
 # Get current working directory
 cwd=$(pwd)
 
-# setup the DDS environment variables
+source /deploy-lsstts/.kafka-cred.sh
 cd /deploy-lsstts/docker-compose-ops/tucson-teststand
 source setup.env
-
 cd calibration_lab
+
 for csc in ${cscs}
 do
   docker-compose pull ${csc}
