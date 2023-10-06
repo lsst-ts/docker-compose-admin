@@ -1,6 +1,7 @@
 #!/bin/bash
 # Launch LOVE on love1
 source .love-cred.sh
+source .kafka-cred.sh
 cd LOVE-integration-tools/deploy/tucson
 docker compose pull
 #docker network create love
