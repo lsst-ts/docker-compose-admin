@@ -1,6 +1,7 @@
 #!/bin/bash
 # Shutdown LOVE on love01
-source /deploy-lsstts/.love-cred.sh
-cd /deploy-lsstts/LOVE-integration-tools/deploy/summit
-docker-compose down -v
+source .love-cred.sh
+source .lfa-cred.sh
+cd LOVE-integration-tools/deploy/summit
+docker compose down -v
 cd ~/
