@@ -19,9 +19,7 @@ if [[ ! -z "${diff}" ]]; then
   git diff --output=${diff_file}
 fi
 if [ ${switch} -eq 1 ]; then
-  if [[ "${repo_dir}" == *"docker-compose-ops"* ]]; then
-    main_branch=master
-  elif [[ "${repo_dir}" == *"docker-compose-admin"* ]]; then
+  if [[ "${repo_dir}" == *"docker-compose"* ]]; then
     main_branch=main
   else
     main_branch=develop
