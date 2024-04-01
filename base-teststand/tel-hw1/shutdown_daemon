@@ -2,6 +2,6 @@
 # Shutdown OSPL daemon on tel-hw1
 cd docker-compose-ops/base-teststand
 source setup.env
-cd support
+cd support/tel-hw1
 docker compose down
 cd ~/

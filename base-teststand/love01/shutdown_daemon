@@ -2,6 +2,6 @@
 # Shutdown OSPL daemon on love01
 cd docker-compose-ops/base-teststand
 source setup.env
-cd support
+cd support/love01
 docker compose down
 cd ~/

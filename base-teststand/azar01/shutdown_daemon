@@ -2,6 +2,6 @@
 # Shutdown OSPL daemon on azar01
 cd docker-compose-ops/base-teststand
 source setup.env
-cd support
+cd support/azar01
 docker compose down
 cd ~/
