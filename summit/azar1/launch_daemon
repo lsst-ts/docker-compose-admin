@@ -2,7 +2,7 @@
 # Launch OSPL daemon on azar1
 cd docker-compose-ops/summit
 source setup.env
-cd support
-docker compose pull ospl-azar1
-docker compose up -d ospl-azar1
+cd support/azar1
+docker compose pull ospl-daemon
+docker compose up -d ospl-daemon
 cd ~/

@@ -2,6 +2,6 @@
 # Shutdown OSPL daemon on azar03
 cd docker-compose-ops/summit
 source setup.env
-cd support
+cd support/azar3
 docker compose down
 cd ~/

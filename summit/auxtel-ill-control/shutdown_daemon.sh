@@ -6,7 +6,7 @@ cwd=$(pwd)
 
 cd docker-compose-ops/summit
 source setup.env
-cd support
+cd support/auxtel-ill-control
 docker-compose down
 # Return to current working directory
 cd $cwd
