@@ -1,0 +1,8 @@
+#!/bin/bash
+# Shutdown develop-env container on tel-hw1
+source .lfa-cred.sh
+cd docker-compose-ops/base-teststand
+source setup.env
+cd develop
+docker compose down
+cd ~/
