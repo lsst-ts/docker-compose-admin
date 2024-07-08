@@ -3,6 +3,6 @@
 cd docker-compose-ops/tucson-teststand
 source setup.env
 cd support/tel-hw1
-docker compose pull ospl-telhw1
-docker compose up -d ospl-telhw1
+docker compose pull ospl-daemon
+docker compose up -d ospl-daemon
 cd ~/
