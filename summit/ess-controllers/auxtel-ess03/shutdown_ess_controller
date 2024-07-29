@@ -1,0 +1,7 @@
+#!/bin/bash
+# Launch ess-controller on auxtel-ess03
+cd docker-compose-ops/summit
+source setup.env
+cd ESS/auxtel-ess03
+docker compose down
+cd ~/

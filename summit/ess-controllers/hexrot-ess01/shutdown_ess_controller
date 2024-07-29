@@ -1,0 +1,7 @@
+#!/bin/bash
+# Launch ess-controller on hexrot-ess01
+cd docker-compose-ops/summit
+source setup.env
+cd ESS/hexrot-ess01
+docker compose down
+cd ~/

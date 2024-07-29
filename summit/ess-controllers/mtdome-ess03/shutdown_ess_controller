@@ -1,0 +1,7 @@
+#!/bin/bash
+# Launch ess-controller on mtdome-ess03
+cd docker-compose-ops/summit
+source setup.env
+cd ESS/mtdome-ess03
+docker compose down
+cd ~/

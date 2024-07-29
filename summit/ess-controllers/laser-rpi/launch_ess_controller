@@ -1,0 +1,8 @@
+#!/bin/bash
+# Launch ess-controller on laser-rpi
+cd docker-compose-ops/summit
+source setup.env
+cd ESS/laser-rpi
+docker compose pull ess-controller
+docker compose up -d ess-contoller
+cd ~/
