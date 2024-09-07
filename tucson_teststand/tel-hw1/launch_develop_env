@@ -1,0 +1,9 @@
+#!/bin/bash
+# Launch develop-env on tel-hw1
+source .lfa-cred.sh
+cd docker-compose-ops/tucson-teststand
+source setup.env
+cd develop
+docker compose pull develop-env
+docker compose up -d develop-env
+cd ~/
