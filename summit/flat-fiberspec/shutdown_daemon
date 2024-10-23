@@ -1,0 +1,12 @@
+#!/bin/bash
+# Shutdown OSPL daemon on flat-fiberspec machines
+machine=$(hostname -s)
+if [ ! -d "docker-compose-ops/summit/support/${machine}" ]; then
+  echo "Flat fiberspec ${machine} configuration not found!"
+  exit 255
+fi
+cd docker-compose-ops/summit
+source setup.env
+cd support/${machine}
+docker compose down
+cd ~/
