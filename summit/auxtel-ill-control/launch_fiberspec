@@ -25,10 +25,10 @@ cd auxtel-ill-control
 
 for csc in ${cscs}
 do
-  docker-compose pull ${csc}
+  docker compose pull ${csc}
 done
 for csc in ${cscs}
 do
-  docker-compose up -d ${csc}
+  docker compose up -d ${csc}
 done
 cd $cwd

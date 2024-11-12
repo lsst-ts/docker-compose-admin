@@ -7,8 +7,8 @@ cwd=$(pwd)
 cd docker-compose-ops/summit
 source setup.env
 cd support/auxtel-ill-control
-docker-compose pull ospl-daemon
-docker-compose up -d ospl-daemon
+docker compose pull ospl-daemon
+docker compose up -d ospl-daemon
 
 # Return to current working directory
 cd $cwd
