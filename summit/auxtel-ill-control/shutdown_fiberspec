@@ -1,0 +1,8 @@
+#!/bin/bash
+# Shutdown the fiberspectrograph_broadband, on auxtel-ill-control
+source .lfa_cred.sh
+cd docker-compose-ops/summit
+source setup.env
+cd auxtel-ill-control
+docker compose down
+cd ~/

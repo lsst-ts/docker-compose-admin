@@ -1,10 +1,6 @@
 #!/bin/bash
 # Launch fiberspectrograph_broadband on auxtel-ill-control
-
-# Get current working directory
-cwd=$(pwd)
-
-# Check to see if a name was given, otherwise assume both
+# Check to see if a name was given, otherwise assume deployment
 if [ $# -lt 1 ]; then
   cscs="fiberspectrograph_broadband"
 else
@@ -12,10 +8,8 @@ else
 fi
 
 # source the lfa credentials
-if [[ "$cscs" == *"fiberspectrograph_broadband"* ]]; then
-  echo "Sourcing LFA credentials to pass to CSC"
-  source .lfa_cred.sh
-fi
+echo "Sourcing LFA credentials to pass to CSC"
+source .lfa_cred.sh
 
 # setup the DDS environment variables
 cd docker-compose-ops/summit
@@ -25,10 +19,10 @@ cd auxtel-ill-control
 
 for csc in ${cscs}
 do
-  docker-compose pull ${csc}
+  docker compose pull ${csc}
 done
 for csc in ${cscs}
 do
-  docker-compose up -d ${csc}
+  docker compose up -d ${csc}
 done
-cd $cwd
+cd ~/
