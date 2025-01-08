@@ -3,6 +3,6 @@
 source .kafka-creds.sh
 cd docker-compose-ops/summit
 source setup.env
-cd MT
+cd develop
 docker compose down
 cd ~/

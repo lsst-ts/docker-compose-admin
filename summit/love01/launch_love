@@ -1,7 +1,8 @@
 #!/bin/bash
 # Launch LOVE on love01
-source .love-cred.sh
-source .lfa-cred.sh
+source .love-creds.sh
+source .lfa-creds.sh
+source .kafka-creds.sh
 cd LOVE-integration-tools/deploy/summit
 docker compose pull
 docker compose up -d
