@@ -7,14 +7,10 @@ else
   cscs="$1"
 fi
 
-# source the lfa credentials
-echo "Sourcing LFA credentials to pass to CSC"
-source .lfa_cred.sh
-
-# setup the DDS environment variables
+source .lfa-creds.sh
+source .kafka-creds.sh
 cd docker-compose-ops/summit
 source setup.env
-
 cd auxtel-ill-control
 
 for csc in ${cscs}
