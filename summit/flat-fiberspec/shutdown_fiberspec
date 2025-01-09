@@ -1,0 +1,14 @@
+#!/bin/bash
+# Shutdown FiberSpectrograph CSC on flat-fiberspec machines
+machine=$(hostname -s)
+if [ ! -d "docker-compose-ops/summit/FiberSpec/${machine}" ]; then
+  echo "Flat fiberspec ${machine} configuration not found!"
+  exit 255
+fi
+source .lfa-creds.sh
+source .kafka-creds.sh
+cd docker-compose-ops/summit
+source setup.env
+cd FiberSpec/${machine}
+docker compose down
+cd ~/
