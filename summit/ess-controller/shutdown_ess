@@ -1,0 +1,14 @@
+#!/bin/bash
+# Shutdown the ess-controller on specific RPis
+
+machine=$(hostname -s)
+if [ ! -d "docker-compose-ops/summit/ESS/${machine}" ]; then
+  echo "ESS controller ${machine} configuration not found!"
+  exit 255
+fi
+
+cd docker-compose-ops/summit
+source setup.env
+cd ESS/${machine}
+docker compose down ess-controller
+cd ~/
