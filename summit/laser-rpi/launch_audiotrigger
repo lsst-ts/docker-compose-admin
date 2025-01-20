@@ -1,0 +1,15 @@
+#!/bin/bash
+# Launch the audiotrigger-controller on laser-rpi
+
+machine=laser-rpi
+if [ ! -d "docker-compose-ops/ESS/${machine}" ]; then
+    echo "Audiotrigger controller ${machine} configuration not found!"
+    exit 255
+fi
+
+cd docker-compose-ops/summit
+source setup.env
+cd ESS/${machine}
+docker compose pull audiotrigger-controller
+docker compose up -d audiotrigger-controller
+cd ~/
