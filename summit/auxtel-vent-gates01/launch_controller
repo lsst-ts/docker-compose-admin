@@ -1,0 +1,9 @@
+#!/bin/bash
+# Launch the vent gate controller
+
+cd docker-compose-ops/summit
+source setup.env
+cd auxtel-vent-gates01
+docker compose pull vent_controller
+docker compose up -d vent_controller
+cd ~/

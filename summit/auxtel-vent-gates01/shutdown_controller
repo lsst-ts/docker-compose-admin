@@ -1,0 +1,8 @@
+#!/bin/bash
+# Shutdown the vent gate controller
+
+cd docker-compose-ops/summit
+source setup.env
+cd auxtel-vent-gates01
+docker compose down
+cd ~/
