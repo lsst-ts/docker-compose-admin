@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shutdown the vent controller
+# Shutdown the vent gate controller
 
 cd docker-compose-ops/summit
 source setup.env
