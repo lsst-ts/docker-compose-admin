@@ -12,16 +12,9 @@ else
   cscs="$1"
 fi
 
-# setup the DDS environment variables
+source /deploy-lsstts/.kafka-cred.sh
 cd /deploy-lsstts/docker-compose-ops/tucson-teststand
 source setup.env
-
-if [ ! -d ${CAL_OSPL_SHMEM_SOCKET_DIR} ]
-then
-  #create temporary file if not present
-  mkdir -p ${CAL_OSPL_SHMEM_SOCKET_DIR}
-  sudo chmod a+rw ${CAL_OSPL_SHMEM_SOCKET_DIR}
-fi
 
 # source the lfa credentials
 if [[ "$cscs" == *"fiberspectrograph"* || "$cscs" == *"electrometer"* ]]; then

@@ -1,5 +1,6 @@
 #!/bin/bash
-# Launch develop-env on tel-hw1
+# Launch develop_env on tel-hw1
+source .kafka-cred.sh
 source .lfa-cred.sh
 cd docker-compose-ops/tucson-teststand
 source setup.env
