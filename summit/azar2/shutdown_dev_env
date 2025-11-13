@@ -1,8 +1,0 @@
-#!/bin/bash
-# Shutdown MT CSCs on azar2
-source .kafka-creds.sh
-cd docker-compose-ops/summit
-source setup.env
-cd develop
-docker compose down
-cd ~/

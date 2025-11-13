@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch MT CSCs on azar2
+# Launch MT CSCs on tel-hw1
 source .kafka-creds.sh
 cd docker-compose-ops/summit
 source setup.env
