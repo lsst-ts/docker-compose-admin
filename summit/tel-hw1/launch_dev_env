@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch dev env on azar2
+# Launch dev env on tel-hw1
 source .kafka-creds.sh
 cd docker-compose-ops/summit
 source setup.env

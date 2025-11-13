@@ -1,7 +1,8 @@
 #!/bin/bash
-# Shutdown OSPL daemon on azar2
+# Shutdown MT CSCs on tel-hw1
+source .kafka-creds.sh
 cd docker-compose-ops/summit
 source setup.env
-cd support/azar2
+cd MT
 docker compose down
 cd ~/
