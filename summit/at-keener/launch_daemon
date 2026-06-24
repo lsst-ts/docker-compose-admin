@@ -1,8 +1,0 @@
-#!/bin/bash
-# Launch OSPL daemon on atkeener
-cd /deploy-lsstts/docker-compose-ops/summit
-source setup.env
-cd support
-docker-compose pull ospl-atkeener
-docker-compose up -d ospl-atkeener
-cd ~/
